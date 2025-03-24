@@ -19,8 +19,6 @@ export default async function RootLayout({
   const isDark = cookieStore.get("theme")?.value === "dark";
   const theme = isDark ? darkTheme : lightTheme;
 
-  console.log("theme", theme);
-
   return (
     <html lang="ko" data-theme={isDark ? "dark" : "light"} className={theme}>
       <body>
