@@ -1,10 +1,11 @@
 import { vars } from "@/app/styles/contract.css";
 import { style } from "@vanilla-extract/css";
 
-export const post = style({
+export const postContainer = style({
   padding: vars.space.space4,
   display: "flex",
   justifyContent: "space-between",
+  cursor: "pointer",
 });
 
 export const postTextArea = style({

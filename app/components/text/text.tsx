@@ -6,6 +6,7 @@ type TextProps = {
   weight?: "light" | "normal" | "medium" | "semibold" | "bold";
   align?: "left" | "center" | "right";
   as?: "p" | "span" | "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  color?: "default" | "secondary";
 } & HTMLAttributes<HTMLElement>;
 
 export const Text = ({
@@ -13,11 +14,12 @@ export const Text = ({
   size,
   weight,
   align,
+  color = "default",
   as: Component = "p",
   ...props
 }: TextProps) => {
   return (
-    <Component className={text({ size, weight, align })} {...props}>
+    <Component className={text({ size, weight, align, color })} {...props}>
       {children}
     </Component>
   );

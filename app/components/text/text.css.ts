@@ -3,12 +3,15 @@ import { recipe } from "@vanilla-extract/recipes";
 
 export const text = recipe({
   base: {
-    color: vars.colors.text,
     margin: 0,
     padding: 0,
   },
 
   variants: {
+    color: {
+      default: { color: vars.colors.text },
+      secondary: { color: vars.colors.secondary },
+    },
     size: {
       xs: { fontSize: vars.textSize.textXs },
       sm: { fontSize: vars.textSize.textSm },
