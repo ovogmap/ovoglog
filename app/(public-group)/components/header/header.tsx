@@ -1,6 +1,6 @@
 import Link from "next/link";
+import { Text } from "../../../components/text/text";
 import { ToggleButton } from "../button/toggleButton";
-import { Text } from "../text/text";
 import { header } from "./header.css";
 
 export default function Header() {

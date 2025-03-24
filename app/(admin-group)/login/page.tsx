@@ -3,6 +3,7 @@
 import { getCookie } from "cookies-next/client";
 import { redirect } from "next/navigation";
 import { useState } from "react";
+import { Button, Container, Input } from "./styles.css";
 
 export default function Login() {
   const token = getCookie("access_token");
@@ -14,6 +15,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
+    if (!email || !password) {
+      alert("이메일과 비밀번호를 입력해주세요.");
+      return;
+    }
+
     const response = await fetch("/api/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
@@ -30,18 +36,28 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <form
+      className={Container}
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleLogin();
+      }}
+    >
       <input
+        className={Input}
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
+        className={Input}
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>로그인</button>
-    </div>
+      <button type="submit" className={Button}>
+        로그인
+      </button>
+    </form>
   );
 }
