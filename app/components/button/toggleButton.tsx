@@ -1,7 +1,9 @@
 "use client";
 
+import { vars } from "@/app/styles/contract.css";
 import { darkTheme, lightTheme } from "@/app/styles/theme.css";
 import { setCookie } from "cookies-next";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toggleButton } from "./toggleButton.css";
 
@@ -34,7 +36,11 @@ export const ToggleButton = () => {
 
   return (
     <button className={toggleButton} onClick={handleToggle}>
-      {isDark === "dark" ? "🌙" : "☀️"}
+      {isDark === "dark" ? (
+        <Moon size={20} color={vars.colors.primary} />
+      ) : (
+        <Sun size={20} color={vars.colors.primary} />
+      )}
     </button>
   );
 };

@@ -9,5 +9,6 @@ export const header = style({
   alignItems: "center",
   borderBottom: `${vars.border.border2} solid ${vars.colors.primary}`,
   height: headerHeight,
-  backgroundColor: vars.colors.background,
+  backgroundColor: "inherit",
+  padding: `0 ${vars.space.space2}`,
 });

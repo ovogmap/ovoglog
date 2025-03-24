@@ -34,11 +34,13 @@ body {
 }
 
 body {
-  width: 800px;
+  min-height: 100vh;
   margin: 0 auto;
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
