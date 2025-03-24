@@ -1,6 +1,7 @@
 import { createSupabaseWithToken } from "@/app/utils/supabaseWithToken";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import Header from "./components/header/header";
 
 export default async function AdminLayout({
   children,
@@ -18,5 +19,10 @@ export default async function AdminLayout({
     redirect("/login");
   }
 
-  return <body>{children}</body>;
+  return (
+    <body>
+      <Header />
+      {children}
+    </body>
+  );
 }

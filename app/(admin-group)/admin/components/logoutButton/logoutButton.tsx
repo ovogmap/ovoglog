@@ -1,5 +1,7 @@
 "use client";
 
+import { Button } from "./logoutButton.css";
+
 // todo: 스타일 필요
 export function LogoutButton() {
   const handleLogout = async () => {
@@ -11,5 +13,9 @@ export function LogoutButton() {
     }
   };
 
-  return <button onClick={handleLogout}>로그아웃</button>;
+  return (
+    <button className={Button} onClick={handleLogout}>
+      로그아웃
+    </button>
+  );
 }
