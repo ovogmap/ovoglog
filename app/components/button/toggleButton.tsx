@@ -23,8 +23,11 @@ export const ToggleButton = () => {
 
   useEffect(() => {
     const root = document.documentElement;
-    const theme = isDark === "dark" ? darkTheme : lightTheme;
-    root.className = theme;
+    const themeClass = isDark === "dark" ? darkTheme : lightTheme;
+    const oppositeThemeClass = isDark === "dark" ? lightTheme : darkTheme;
+
+    root.classList.remove(oppositeThemeClass);
+    root.classList.add(themeClass);
     root.setAttribute("data-theme", isDark);
     setCookie("theme", isDark);
   }, [isDark]);

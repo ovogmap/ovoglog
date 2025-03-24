@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import Header from "./components/header/header";
 import { Main } from "./components/main/main";
+import { pretendard } from "./styles/fonts";
 import "./styles/globals.css";
 import { darkTheme, lightTheme } from "./styles/theme.css";
 
@@ -20,7 +21,11 @@ export default async function RootLayout({
   const theme = isDark ? darkTheme : lightTheme;
 
   return (
-    <html lang="ko" data-theme={isDark ? "dark" : "light"} className={theme}>
+    <html
+      lang="ko"
+      data-theme={isDark ? "dark" : "light"}
+      className={`${theme} ${pretendard.variable}`}
+    >
       <body>
         <Header />
         <Main>{children}</Main>

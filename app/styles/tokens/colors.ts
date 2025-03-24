@@ -1,16 +1,16 @@
 export const colorTokens = {
   light: {
-    primary: "#2c3e50",
-    secondary: "#95a5a6",
+    primary: "#1890ff",
+    secondary: "#4d4d4d",
     accent: "#e67e22",
     background: "#f5f5f5",
-    text: "#2c3e50",
+    text: "#1a1a1a",
   },
   dark: {
-    primary: "#ecf0f1",
-    secondary: "#7f8c8d",
+    primary: "#2f6ccf",
+    secondary: "#b3b3b3",
     accent: "#f39c12",
     background: "#1a1a1a",
-    text: "#ecf0f1",
+    text: "#e6e6e6",
   },
 };
