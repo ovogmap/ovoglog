@@ -1,9 +1,5 @@
-import { Text } from "@/app/components/text/text";
+import Editor from "./components/editor/editor";
 
 export default function Admin() {
-  return (
-    <div>
-      <Text>Admin</Text>
-    </div>
-  );
+  return <Editor />;
 }
