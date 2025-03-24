@@ -16,5 +16,5 @@ export const postTextArea = style({
 
 export const postImage = style({
   objectFit: "cover",
-  borderRadius: vars.radius.radiusSm,
+  borderRadius: vars.radius.radiusMd,
 });
