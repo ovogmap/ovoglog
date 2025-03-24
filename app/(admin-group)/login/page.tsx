@@ -24,8 +24,6 @@ export default function Login() {
       method: "POST",
       body: JSON.stringify({ email, password }),
     });
-
-    console.log(response);
     const data = await response.json();
     if (data.error) {
       alert(data.error);
