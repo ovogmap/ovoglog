@@ -8,6 +8,19 @@ import { toggleButton } from "./toggleButton.css";
 export const ToggleButton = () => {
   const [isDark, setIsDark] = useState<"dark" | "light">("dark");
 
+  const handleToggle = () => {
+    const newTheme = isDark === "dark" ? "light" : "dark";
+    setIsDark(newTheme);
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const savedTheme = root.getAttribute("data-theme") as "dark" | "light";
+    if (savedTheme) {
+      setIsDark(savedTheme);
+    }
+  }, []);
+
   useEffect(() => {
     const root = document.documentElement;
     const theme = isDark === "dark" ? darkTheme : lightTheme;
@@ -15,11 +28,6 @@ export const ToggleButton = () => {
     root.setAttribute("data-theme", isDark);
     setCookie("theme", isDark);
   }, [isDark]);
-
-  const handleToggle = () => {
-    const newTheme = isDark === "dark" ? "light" : "dark";
-    setIsDark(newTheme);
-  };
 
   return (
     <button className={toggleButton} onClick={handleToggle}>
