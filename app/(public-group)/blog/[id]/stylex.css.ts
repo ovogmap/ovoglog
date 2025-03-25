@@ -6,6 +6,6 @@ export const container = style({
   flexDirection: "column",
   justifyContent: "center",
   width: "100%",
-  padding: vars.space.space2,
+  padding: vars.space.space3,
   gap: vars.space.space3,
 });

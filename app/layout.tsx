@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { pretendard } from "./styles/fonts";
 import "./styles/globals.css";
 import { darkTheme, lightTheme } from "./styles/theme.css";
+import { clsx } from "./utils/clsx";
 
 export const metadata: Metadata = {
   title: "ovoglog",
@@ -22,7 +23,7 @@ export default async function RootLayout({
     <html
       lang="ko"
       data-theme={isDark ? "dark" : "light"}
-      className={`${theme} ${pretendard.variable}`}
+      className={clsx(theme, pretendard.variable)}
     >
       {children}
     </html>

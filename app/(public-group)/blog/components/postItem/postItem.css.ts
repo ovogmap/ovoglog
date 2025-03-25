@@ -2,7 +2,7 @@ import { vars } from "@/app/styles/contract.css";
 import { style } from "@vanilla-extract/css";
 
 export const postContainer = style({
-  padding: vars.space.space4,
+  padding: vars.space.space3,
   display: "flex",
   justifyContent: "space-between",
   cursor: "pointer",

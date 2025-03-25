@@ -1,8 +1,8 @@
-import { Container, post } from "./post.css";
+import { post } from "./post.css";
 
 export default function Posts({ children }: { children: React.ReactNode }) {
   return (
-    <div className={Container}>
+    <div>
       <ul className={post}>{children}</ul>
     </div>
   );
