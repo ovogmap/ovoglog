@@ -6,11 +6,26 @@ import { typographyTokens } from "./tokens/typography";
 
 export const lightTheme = createTheme(vars, {
   colors: {
-    primary: colorTokens.light.primary,
-    secondary: colorTokens.light.secondary,
-    accent: colorTokens.light.accent,
-    background: colorTokens.light.background,
-    text: colorTokens.light.text,
+    background: {
+      primary: colorTokens.light.background.primary,
+      secondary: colorTokens.light.background.secondary,
+      accent: colorTokens.light.background.accent,
+      background: colorTokens.light.background.background,
+      text: colorTokens.light.background.text,
+    },
+    font: {
+      primary: colorTokens.light.font.primary,
+      secondary: colorTokens.light.font.secondary,
+      tertiary: colorTokens.light.font.tertiary,
+      placeholder: colorTokens.light.font.placeholder,
+      onColor: colorTokens.light.font.onColor,
+      captionOnColor: colorTokens.light.font.captionOnColor,
+      accent: colorTokens.light.font.accent,
+      danger: colorTokens.light.font.danger,
+      mentionPrimary: colorTokens.light.font.mentionPrimary,
+      mentionSecondary: colorTokens.light.font.mentionSecondary,
+      variable: colorTokens.light.font.variable,
+    },
   },
   space: {
     space1: spacingTokens.space.space1,
@@ -76,11 +91,26 @@ export const lightTheme = createTheme(vars, {
 
 export const darkTheme = createTheme(vars, {
   colors: {
-    primary: colorTokens.dark.primary,
-    secondary: colorTokens.dark.secondary,
-    accent: colorTokens.dark.accent,
-    background: colorTokens.dark.background,
-    text: colorTokens.dark.text,
+    background: {
+      primary: colorTokens.dark.background.primary,
+      secondary: colorTokens.dark.background.secondary,
+      accent: colorTokens.dark.background.accent,
+      background: colorTokens.dark.background.background,
+      text: colorTokens.dark.background.text,
+    },
+    font: {
+      primary: colorTokens.dark.font.primary,
+      secondary: colorTokens.dark.font.secondary,
+      tertiary: colorTokens.dark.font.tertiary,
+      placeholder: colorTokens.dark.font.placeholder,
+      onColor: colorTokens.dark.font.onColor,
+      captionOnColor: colorTokens.dark.font.captionOnColor,
+      accent: colorTokens.dark.font.accent,
+      danger: colorTokens.dark.font.danger,
+      mentionPrimary: colorTokens.dark.font.mentionPrimary,
+      mentionSecondary: colorTokens.dark.font.mentionSecondary,
+      variable: colorTokens.dark.font.variable,
+    },
   },
   space: {
     space1: spacingTokens.space.space1,

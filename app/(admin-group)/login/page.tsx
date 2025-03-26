@@ -42,12 +42,15 @@ export default function Login() {
       }}
     >
       <input
+        autoFocus
+        placeholder="email"
         className={Input}
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
+        placeholder="password"
         className={Input}
         type="password"
         value={password}

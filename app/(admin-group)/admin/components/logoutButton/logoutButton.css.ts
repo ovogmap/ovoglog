@@ -2,16 +2,14 @@ import { vars } from "@/app/styles/contract.css";
 import { style } from "@vanilla-extract/css";
 
 export const Button = style({
-  padding: `0 ${vars.space.space2}`,
-  height: "25px",
-  borderRadius: vars.radius.radiusLg,
-  border: `2px solid ${vars.colors.primary}`,
+  padding: `${vars.space.space1} ${vars.space.space2}`,
+  borderRadius: vars.radius.radiusMd,
+  border: `1px solid ${vars.colors.font.tertiary}`,
   backgroundColor: "inherit",
-  color: vars.colors.primary,
+  color: vars.colors.font.tertiary,
   cursor: "pointer",
   textAlign: "center",
-  fontSize: "14px",
-  fontWeight: "bold",
-  transition: "all 0.2s ease-in-out",
+  fontSize: vars.textSize.textXs,
+  fontWeight: vars.fontWeight.fontBold,
   outline: "none",
 });

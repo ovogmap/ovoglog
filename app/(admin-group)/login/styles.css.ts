@@ -14,7 +14,7 @@ export const Container = style({
 export const Input = style({
   width: "200px",
   height: "25px",
-  padding: "0 16px",
+  padding: "0 8px",
   borderRadius: vars.radius.radiusSm,
   border: "1px solid #E5E7EB",
   backgroundColor: "#FFFFFF",

@@ -3,11 +3,26 @@ import { createThemeContract } from "@vanilla-extract/css";
 
 export const vars = createThemeContract({
   colors: {
-    primary: "",
-    secondary: "",
-    accent: "",
-    background: "",
-    text: "",
+    background: {
+      primary: "",
+      secondary: "",
+      accent: "",
+      background: "",
+      text: "",
+    },
+    font: {
+      primary: "",
+      secondary: "",
+      tertiary: "",
+      placeholder: "",
+      onColor: "",
+      captionOnColor: "",
+      accent: "",
+      danger: "",
+      mentionPrimary: "",
+      mentionSecondary: "",
+      variable: "",
+    },
   },
   space: {
     space1: "",

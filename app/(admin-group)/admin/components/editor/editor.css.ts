@@ -23,7 +23,7 @@ export const editorTitleInput = style({
   backgroundColor: "transparent",
   fontSize: "24px",
   fontWeight: "bold",
-  color: vars.colors.text,
+  color: vars.colors.font.primary,
   outline: "none",
 });
 

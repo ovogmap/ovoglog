@@ -7,7 +7,7 @@ export const header = style({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  borderBottom: `${vars.border.border2} solid ${vars.colors.primary}`,
+  borderBottom: `${vars.border.border2} solid ${vars.colors.background.primary}`,
   height: headerHeight,
   backgroundColor: "inherit",
   padding: `0 ${vars.space.space2}`,
