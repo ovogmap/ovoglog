@@ -1,5 +1,6 @@
 "use client";
 
+import { savePost } from "@/app/(admin-group)/actions";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import {
@@ -32,7 +33,17 @@ export default function Editor() {
       alert("제목과 내용을 입력해주세요.");
       return;
     }
-    alert("저장 완료!");
+
+    try {
+      const data = await savePost({ title, content });
+      console.log(data);
+      alert("저장 완료!");
+    } catch (error) {
+      console.error("저장 중 에러 발생:", error);
+      alert(
+        error instanceof Error ? error.message : "저장 중 오류가 발생했습니다."
+      );
+    }
   };
 
   return (
