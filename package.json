@@ -9,18 +9,21 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@stylexjs/stylex": "^0.17.5",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "velite": "^0.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@stylexjs/babel-plugin": "^0.17.5",
+    "@stylexjs/postcss-plugin": "^0.17.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.27",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }
