@@ -1,19 +1,50 @@
-@stylex;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  --color-canvas: var(--app-canvas);
+  --color-surface: var(--app-surface);
+  --color-surface-subtle: var(--app-surface-subtle);
+  --color-foreground: var(--app-foreground);
+  --color-muted: var(--app-muted);
+  --color-border: var(--app-border);
+  --color-primary: var(--app-primary);
+  --color-primary-strong: var(--app-primary-strong);
+  --color-code: var(--app-code);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  color-scheme: light;
+  --app-canvas: #f7f8f8;
+  --app-surface: #ffffff;
+  --app-surface-subtle: #eef2f1;
+  --app-foreground: #141718;
+  --app-muted: #5f696d;
+  --app-border: #dce1e3;
+  --app-primary: #1b7f79;
+  --app-primary-strong: #115e59;
+  --app-code: #172022;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --app-canvas: #0f1112;
+  --app-surface: #171a1c;
+  --app-surface-subtle: #202628;
+  --app-foreground: #eef2f2;
+  --app-muted: #9aa5a8;
+  --app-border: #2c3336;
+  --app-primary: #4fb7ad;
+  --app-primary-strong: #7bd3cb;
+  --app-code: #edf6f5;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  min-height: 100vh;
+  background: var(--app-canvas);
+  color: var(--app-foreground);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }

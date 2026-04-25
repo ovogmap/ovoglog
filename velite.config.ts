@@ -17,6 +17,7 @@ export default defineConfig({
         date: s.isodate(),
         slug: s.slug("posts"),
         tags: s.array(s.string()).optional(),
+        toc: s.toc(),
         body: s.mdx(),
       }),
     },
