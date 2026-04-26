@@ -1,19 +1,21 @@
-name: Vercel Promote
+name: Vercel Production
 
 on:
   workflow_dispatch:
-    inputs:
-      deployment_url:
-        description: Preview deployment URL to promote
-        required: true
-        type: string
 
 jobs:
-  promote:
-    name: Promote preview to production
+  deploy-production:
+    name: Deploy production
     runs-on: ubuntu-latest
 
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -23,6 +25,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: pnpm
 
-      - name: Promote deployment
-        run: pnpm dlx vercel promote "${{ inputs.deployment_url }}" --yes --token="${{ secrets.VERCEL_TOKEN }}"
+      - name: Pull Vercel environment
+        run: pnpm dlx vercel pull --yes --environment=production --token="${{ secrets.VERCEL_TOKEN }}"
+
+      - name: Build Vercel output
+        run: pnpm dlx vercel build --prod --token="${{ secrets.VERCEL_TOKEN }}"
+
+      - name: Deploy production
+        run: pnpm dlx vercel deploy --prebuilt --prod --token="${{ secrets.VERCEL_TOKEN }}"
